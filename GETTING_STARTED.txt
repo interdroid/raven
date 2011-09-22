@@ -1,0 +1,64 @@
+Getting Started With Raven
+--------------------------
+
+This document is intended to help you get started with working with raven.
+
+First you will need Eclipse and the Android SDK, as well as git to
+fetch the source with. Installing these is beyond the scope of this
+document, but we recommend reading this:
+
+
+Second you will need all the required projects in your Eclipse workspace.
+The easiest way to accomplish this is to checkout the raven superproject.
+
+> git clone http://github.com/interdroid/raven.git
+
+Next you will need to have git checkout all the subprojects and set them
+up properly. The easiest way to do this is run setup.sh contained in the
+raven project.
+
+> cd raven
+> ./setup.sh
+
+This will checkout and initialize all subprojects.
+
+Additionally, if you wish to change things you should make sure to
+checkout a branch to work in.
+
+> git submodule foreach git branch <branchname>
+> git submodule foreach git checkout <branchname>
+
+Now you can open Eclipse and import the various required projects.
+
+1) Select the File -> Import menu item.
+
+2) Select Git -> Projects from Git
+
+3) Click the Add... button
+
+4) Select the raven directory, check "Look for nested repositories" and
+press "Search" This will find 8 repositories.
+
+5) Uncheck raven3/.git (which is the first item in the list) and hit OK
+
+6) Now select slf4android, Press Next twice and then Finish.
+
+Now do the remainder of the repositories, repeating steps 1, 2 & 6 for each
+in the following order:
+
+interdroid-util
+jgit (Note that jgit has a lot of subprojects. You can choose to just import org.eclipse.jgit if you want to keep your workspace cleaner.)
+smartsockets
+vdb
+vdb-avro
+vdb-ui
+
+Finally, note that eclipse is not consistent with how it orders things
+in .classpath files for Android projects and tends to rewrite them for
+no apparent reason. After setting up it is recommended to run setup-finish.sh
+to checkout a clean version of the .classpath files and then select
+all projects and refresh them so you have a clean environment to
+begin working in.
+
+No you should be able to deploy the vdb-ui application onto an emulator
+or a phone!
