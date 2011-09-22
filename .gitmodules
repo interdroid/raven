@@ -1,0 +1,21 @@
+[submodule "slf4android"]
+	path = slf4android
+	url = git://github.com/interdroid/slf4android.git
+[submodule "smartsockets"]
+	path = smartsockets
+	url = git://github.com/interdroid/smartsockets.git
+[submodule "vdb"]
+	path = vdb
+	url = git://github.com/interdroid/interdroid-vdb.git
+[submodule "vdb-avro"]
+	path = vdb-avro
+	url = git://github.com/interdroid/interdroid-vdb-avro.git
+[submodule "vdb-ui"]
+	path = vdb-ui
+	url = git://github.com/interdroid/interdroid-vdb-ui.git
+[submodule "jgit"]
+	path = jgit
+	url = https://github.com/eclipse/jgit.git
+[submodule "interdroid-util"]
+	path = interdroid-util
+	url = http://github.com/interdroid/interdroid-util.git
