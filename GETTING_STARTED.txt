@@ -50,7 +50,8 @@ press "Search" This will find 8 repositories.
    interdroid-util
    jgit (Note that jgit has a lot of subprojects. You can choose to
          just import org.eclipse.jgit if you want to keep your
-         workspace cleaner.)  smartsockets
+         workspace cleaner.)  
+   smartsockets
    vdb
    vdb-avro
    vdb-ui
