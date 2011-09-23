@@ -24,7 +24,7 @@ raven project.
 This will checkout and initialize all subprojects.
 
 Additionally, if you wish to change things you should make sure to
-checkout a branch to work in.
+create and checkout a branch to work in.
 
 > git submodule foreach git branch <branchname>
 > git submodule foreach git checkout <branchname>
@@ -44,22 +44,32 @@ press "Search" This will find 8 repositories.
 
 6) Now select slf4android, Press Next twice and then Finish.
 
-Now do the remainder of the repositories, repeating steps 1, 2 & 6 for each
-in the following order:
+7) Now do the remainder of the repositories, repeating steps 1, 2 & 6 for each
+   in the following order:
 
-interdroid-util
-jgit (Note that jgit has a lot of subprojects. You can choose to just import org.eclipse.jgit if you want to keep your workspace cleaner.)
-smartsockets
-vdb
-vdb-avro
-vdb-ui
+   interdroid-util
+   jgit (Note that jgit has a lot of subprojects. You can choose to
+         just import org.eclipse.jgit if you want to keep your
+         workspace cleaner.)  smartsockets
+   vdb
+   vdb-avro
+   vdb-ui
 
-Finally, note that eclipse is not consistent with how it orders things
-in .classpath files for Android projects and tends to rewrite them for
-no apparent reason. After setting up it is recommended to run setup-finish.sh
-to checkout a clean version of the .classpath files and then select
-all projects and refresh them so you have a clean environment to
-begin working in.
+8) You should be done, but if you are showing changes to any
+   repositories follow 8a. If you are showing any build errors
+   follow 8b.
 
-No you should be able to deploy the vdb-ui application onto an emulator
+8a) Eclipse is not always consistent with how it orders things in
+    .classpath files for Android projects and tends to rewrite them
+    for no apparent reason. After setting up it is recommended to run
+    setup-finish.sh to checkout a clean version of the .classpath
+    files and then select all projects and refresh them so you have a
+    clean environment to begin working in.
+
+8b) Also note that Eclipse is not always good at reloading android
+    libraries when required to do so. If after doing the above you
+    have build errors, it is recommended to quit and restart Eclipse
+    to trigger the android library update process again.
+
+Now you should be able to deploy the vdb-ui application onto an emulator
 or a phone!
